@@ -59,9 +59,17 @@ server <- function(input, output, session) {
       labs(
         title = glue("prix : {input$prix} & color: {input$filtre_couleurs}"),
         x = "carat",
-        y = "price"
-      ) 
-})}
+        y = "price") 
+  })
+  output$diamonds_table <- renderDT({
+    datatable(data_filtered())
+  })
+  
+  observeEvent(input$boutton, {
+    showNotification(glue("prix: {input$prix} & color: {input$filtre_couleurs}"), type = "message")
+  })
+}
+
 
 # Run the application 
 shinyApp(ui = ui, server = server)
