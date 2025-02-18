@@ -10,14 +10,6 @@ library(thematic)
 library(shinylive)
 library(rsconnect)
 
-
-shinylive::export(
-  appdir = ".",
-  destdir = "docs"
-)
-
-httpuv::runStaticServer("docs")
-
 data("diamonds")
 thematic_shiny(font = "auto")
 ui <- fluidPage(
@@ -92,4 +84,3 @@ server <- function(input, output, session) {
 }
 
 shinyApp(ui = ui, server = server)
-rsconnect::accountInfo()
