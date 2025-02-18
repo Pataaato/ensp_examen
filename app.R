@@ -8,6 +8,7 @@ library(DT)
 library(bslib)
 library(thematic)
 library(shinylive)
+library(rsconnect)
 
 data("diamonds")
 thematic_shiny(font = "auto")
@@ -83,3 +84,4 @@ server <- function(input, output, session) {
 }
 
 shinyApp(ui = ui, server = server)
+rsconnect::accountInfo()
