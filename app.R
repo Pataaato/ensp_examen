@@ -10,6 +10,11 @@ library(thematic)
 library(shinylive)
 library(rsconnect)
 
+
+shinylive::export(
+  appdir = ".",
+  destdir = "docs"
+)
 data("diamonds")
 thematic_shiny(font = "auto")
 ui <- fluidPage(
