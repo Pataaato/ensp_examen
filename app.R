@@ -27,7 +27,13 @@ ui <- fluidPage(
         inputId = "filtre_couleurs",
         choices = c("D", "E", "F", "G", "H", "I", "J"),
         label = "Choisir une couleur à filtrer :"
-      )),
+      ), sliderInput(
+        inputId = "prix",
+        label = "Prix maximum :",
+        min = 300,
+        max = 20000,
+        value = 5000)
+      ),
         mainPanel(
            plotOutput("distPlot")
         )
