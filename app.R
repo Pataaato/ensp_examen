@@ -7,6 +7,7 @@ library(glue)
 library(DT)
 library(bslib)
 library(thematic)
+library(shinylive)
 
 data("diamonds")
 thematic_shiny(font = "auto")
@@ -59,7 +60,18 @@ server <- function(input, output, session) {
       labs(
         title = glue("prix : {input$prix} & color: {input$filtre_couleurs}"),
         x = "carat",
-        y = "price") 
+        y = "price") +
+      theme_minimal()+
+      theme(
+        text = element_text(family = "Monaco"),
+        title = element_text(family = "Monaco", color = "#5a5a5a"),  
+        axis.text = element_text(family = "Monaco", color = "#5a5a5a"),  
+        axis.title = element_text(family = "Monaco", color = "#5a5a5a"),  
+        panel.background = element_rect(fill = "#f0f0f0", color = NA),
+        plot.background = element_rect(fill = "white", color = NA),
+        panel.grid.major = element_line(color = "white"),
+        panel.grid.minor = element_line(color = "white")
+      )
   })
   output$diamonds_table <- renderDT({
     datatable(data_filtered())
