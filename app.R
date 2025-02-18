@@ -22,6 +22,11 @@ ui <- fluidPage(
         choices = c("Oui", "Non"), 
         selected = "Oui", 
         inline = TRUE
+      ), 
+      selectInput(
+        inputId = "filtre_couleurs",
+        choices = c("D", "E", "F", "G", "H", "I", "J"),
+        label = "Choisir une couleur à filtrer :"
       )),
         mainPanel(
            plotOutput("distPlot")
