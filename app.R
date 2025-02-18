@@ -21,19 +21,21 @@ ui <- fluidPage(
         label = "Colorier les points en rose ?",
         choices = c("Oui", "Non"), 
         selected = "Oui", 
-        inline = TRUE
-      ), 
+        inline = TRUE), 
       selectInput(
         inputId = "filtre_couleurs",
         choices = c("D", "E", "F", "G", "H", "I", "J"),
-        label = "Choisir une couleur à filtrer :"
-      ), sliderInput(
+        label = "Choisir une couleur à filtrer :"), 
+      sliderInput(
         inputId = "prix",
         label = "Prix maximum :",
         min = 300,
         max = 20000,
-        value = 5000)
-      ),
+        value = 5000), 
+      actionButton(
+        inputId = "boutton", 
+        label = "Afficher une notification"
+      )),
         mainPanel(
            plotOutput("distPlot")
         )
