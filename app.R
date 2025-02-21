@@ -14,7 +14,7 @@ data("diamonds")
 thematic_shiny(font = "auto")
 ui <- fluidPage(
   theme = bs_theme(version = 5, bootswatch = "minty"),
-  h1("Exploration des Diamants"),
+  h2("Exploration des Diamants"),
   
   sidebarLayout(
     sidebarPanel(
