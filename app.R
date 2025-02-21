@@ -22,8 +22,8 @@ ui <- fluidPage(
         inputId = "couleur_rose", 
         label = "Colorier les points en rose ?",
         choices = c("Oui", "Non"), 
-        selected = "Oui", 
-        inline = TRUE), 
+        selected = "Oui"
+        ), 
       
       selectInput(
         inputId = "filtre_couleurs",
@@ -57,17 +57,17 @@ server <- function(input, output, session) {
   })
   output$diamondsPlot <- renderPlot({
     ggplot(data_filtered(), aes(x = carat, y = price)) +
-      geom_point(color = ifelse(input$couleur_rose == "Oui", "#f3969a", "#5a5a5a")) +
+      geom_point(color = ifelse(input$couleur_rose == "Oui", "pink", "#5a5a5a")) +
       labs(
         title = glue("prix : {input$prix} & color: {input$filtre_couleurs}"),
         x = "carat",
         y = "price") +
       theme_minimal()+
       theme(
-        text = element_text(family = "Monaco"),
-        title = element_text(family = "Monaco", color = "#5a5a5a"),  
-        axis.text = element_text(family = "Monaco", color = "#5a5a5a"),  
-        axis.title = element_text(family = "Monaco", color = "#5a5a5a"),  
+        text = element_text(family = "Monaco", size = 12),
+        title = element_text(family = "Monaco", color = "#5a5a5a", size = 12),  
+        axis.text = element_text(family = "Monaco", color = "#5a5a5a", size = 10),  
+        axis.title = element_text(family = "Monaco", color = "#5a5a5a", size = 10),  
         panel.background = element_rect(fill = "#f0f0f0", color = NA),
         plot.background = element_rect(fill = "white", color = NA),
         panel.grid.major = element_line(color = "white"),
