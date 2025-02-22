@@ -59,7 +59,7 @@ server <- function(input, output, session) {
     ggplot(data_filtered(), aes(x = carat, y = price)) +
       geom_point(color = ifelse(input$couleur_rose == "Oui", "pink", "#5a5a5a")) +
       labs(
-        title = glue("prix : {input$prix} & color: {input$filtre_couleurs}"),
+        title = glue("prix: {input$prix} & color: {input$filtre_couleurs}"),
         x = "carat",
         y = "price") +
       theme_minimal()+
