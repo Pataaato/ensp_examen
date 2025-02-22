@@ -65,8 +65,8 @@ server <- function(input, output, session) {
       theme_minimal()+
       theme(
         text = element_text(family = "Monaco", size = 10),
-        title = element_text(family = "Monaco", color = "#5a5a5a", size = 11),  
-        axis.text = element_text(family = "Monaco", color = "#909090", size = 10),  
+        title = element_text(family = "Monaco", color = "#5a5a5a", size = 10),  
+        axis.text = element_text(family = "Monaco", color = "#909090", size = 9),  
         axis.title = element_text(family = "Monaco", color = "#909090", size = 10),  
         axis.ticks = element_line(color = "#7a7a7a"),  
         panel.background = element_rect(fill = "#f3f3f3", color = NA),
