@@ -65,14 +65,16 @@ server <- function(input, output, session) {
       theme_minimal()+
       theme(
         text = element_text(family = "Monaco", size = 11),
-        title = element_text(family = "Monaco", color = "grey", size = 11),  
-        axis.text = element_text(family = "Monaco", color = "grey", size = 11),  
-        axis.title = element_text(family = "Monaco", color = "grey", size = 11),  
-        panel.background = element_rect(family = "Monaco", fill = "#f0f0f0", color = NA),
-        plot.background = element_rect(family = "Monaco", fill = "white", color = NA),
+        title = element_text(family = "Monaco", color = "darkgrey", size = 11),  
+        axis.text = element_text(family = "Monaco", color = "darkgrey", size = 11),  
+        axis.title = element_text(family = "Monaco", color = "darkgrey", size = 11),  
+        axis.ticks = element_line(color = "darkgrey"),  
+        panel.background = element_rect(fill = "#f0f0f0", color = NA),
+        plot.background = element_rect(fill = "white", color = NA),
         panel.grid.major = element_line(color = "white"),
-        panel.grid.minor = element_line(color = "white")
-      )
+        panel.grid.minor = element_line(color = "white")) 
+        
+    
   })
   output$diamonds_table <- renderDT({
     datatable(data_filtered())
