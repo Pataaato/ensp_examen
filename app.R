@@ -71,8 +71,8 @@ server <- function(input, output, session) {
         axis.ticks = element_line(color = "#7a7a7a"),  
         panel.background = element_rect(fill = "#f3f3f3", color = NA),
         plot.background = element_rect(fill = "#ffffff", color = NA),
-        panel.grid.major = element_line(color = "#ffffff"),
-        panel.grid.minor = element_line(color = "#ffffff")) 
+        panel.grid.major = element_line(color = "#ffffff", size = 0.5),
+        panel.grid.minor = element_line(color = "#ffffff", size = 0.3)) 
         
     
   })
