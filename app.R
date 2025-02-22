@@ -64,12 +64,12 @@ server <- function(input, output, session) {
         y = "price") +
       theme_minimal()+
       theme(
-        text = element_text(family = "Monaco", size = 11),
-        title = element_text(family = "Monaco", color = "darkgrey", size = 11),  
-        axis.text = element_text(family = "Monaco", color = "darkgrey", size = 11),  
-        axis.title = element_text(family = "Monaco", color = "darkgrey", size = 11),  
-        axis.ticks = element_line(color = "darkgrey"),  
-        panel.background = element_rect(fill = "#f0f0f0", color = NA),
+        text = element_text(family = "Monaco", size = 10),
+        title = element_text(family = "Monaco", color = "#5a5a5a", size = 11),  
+        axis.text = element_text(family = "Monaco", color = "#909090", size = 10),  
+        axis.title = element_text(family = "Monaco", color = "#909090", size = 10),  
+        axis.ticks = element_line(color = "#7a7a7a"),  
+        panel.background = element_rect(fill = "#f3f3f3", color = NA),
         plot.background = element_rect(fill = "white", color = NA),
         panel.grid.major = element_line(color = "white"),
         panel.grid.minor = element_line(color = "white")) 
