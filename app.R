@@ -69,7 +69,7 @@ server <- function(input, output, session) {
         axis.text = element_text(family = "Monaco", color = "#909090", size = 9),  
         axis.title = element_text(family = "Monaco", color = "#5a5a5a", size = 11),  
         axis.ticks = element_line(color = "#7a7a7a"),  
-        panel.background = element_rect(fill = "#f3f3f3", color = NA),
+        panel.background = element_rect(fill = "#ffffff", color = NA),
         plot.background = element_rect(fill = "#ffffff", color = NA),
         panel.grid.major = element_line(color = "white"),
         panel.grid.minor = element_line(color = "white")) 
